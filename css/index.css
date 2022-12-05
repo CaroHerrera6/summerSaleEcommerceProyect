@@ -1,0 +1,52 @@
+.jumbotron {
+  position: sticky;
+  height: 75vh;
+
+  background: url("/img/cover.jpg");
+
+  background-position: center;
+  background-size: cover;
+
+  margin-bottom: 0;
+
+  /* background-size: cover;
+
+  background-repeat: no-repeat; */
+  color: black;
+  font-weight: bold;
+}
+
+.card-img-top {
+  background-position: center;
+}
+.cat {
+  max-width: 18em;
+  margin: 3em;
+}
+
+footer {
+  background-color: #1b2430;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.modal-body {
+  padding: 3em;
+  background-color: #e5d9b6;
+  color: #497174;
+}
+form input {
+  margin: 1em;
+}
+form label {
+  font-family: "Abril Fatface", cursive;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+.modal-header,
+.modal-footer {
+  background-image: url(/img/modal-background.jpg);
+  background-size: cover;
+}
+.modal-title {
+  font-family: "Abril Fatface", cursive;
+}
