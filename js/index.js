@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location = "products.html";
   });
   document.getElementById("optionChosen").addEventListener("click", () => {
-    if ((document.getElementById("her").checked = true)) {
+    if (document.getElementById("her").checked) {
       localStorage.setItem("catID", 14);
       window.location = "products.html";
-    } else if ((document.getElementById("him").checked = true)) {
+    } else {
       localStorage.setItem("catID", 11);
       window.location = "products.html";
     }
