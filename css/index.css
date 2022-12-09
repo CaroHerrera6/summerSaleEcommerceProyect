@@ -42,7 +42,7 @@ form label {
 }
 .modal-header,
 .modal-footer {
-  background-image: url(/img/modal-background.jpg);
+  background-image: url("../img/modal-background.jpg");
   background-size: cover;
 }
 .modal-title {

@@ -1,0 +1,65 @@
+body {
+  background-color: white;
+}
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+
+  font-size: 44px;
+  line-height: 56px;
+}
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 4em;
+}
+
+.btn-main {
+  color: #fff;
+  border-radius: 30px;
+  font-size: 18px;
+  padding: 15px 40px;
+  display: inline-block;
+  background-color: #f9a743;
+  box-shadow: 0 15px 40px rgba(249, 167, 68, 0.5);
+  background-image: linear-gradient(
+    bottom,
+    rgba(255, 239, 206, 0) 0%,
+    rgba(255, 239, 206, 0.25) 100%
+  );
+
+  /* &:hover,
+  &:focus {
+    background-color: $primary-color;
+    color: #fff;
+  } */
+}
+p {
+  font-size: 18px;
+  line-height: 25px;
+}
+section {
+  padding: 100px 0;
+}
+.discount {
+  color: red;
+}
+.comments {
+  margin: auto;
+  width: 60%;
+}
+#date {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+.italic {
+  font-weight: 300;
+}
+.fa-star {
+  color: goldenrod;
+}
+#floatingTextarea3 {
+  max-width: 14em;
+  margin-bottom: 1em;
+}

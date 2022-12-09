@@ -1,3 +1,22 @@
-.price {
-  float: end;
+#title {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 48px;
+  margin-top: 1em;
+}
+hr {
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 3em;
+}
+img {
+  width: 10vw;
+  height: 20vh;
+}
+section {
+  height: 250px;
+}
+.description {
+  overflow: auto;
+  height: 70px;
 }

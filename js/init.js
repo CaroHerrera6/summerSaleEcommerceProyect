@@ -1,7 +1,12 @@
 const MYAPI = "https://fakestoreapi.com/products";
 const PRODUCTS_URL =
   "https://caroherrera6.github.io/sumerSaleApi/cats_products/";
-EXT_TYPE = ".json";
+const PRODUCT_INFO_URL =
+  "https://caroherrera6.github.io/sumerSaleApi/products/";
+const PRODUCT_COMMENT_URL =
+  "https://caroherrera6.github.io/sumerSaleApi/product_comments/";
+
+const EXT_TYPE = ".json";
 
 let getJSONData = function (url) {
   let result = {};
