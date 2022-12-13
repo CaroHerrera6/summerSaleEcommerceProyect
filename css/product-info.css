@@ -49,7 +49,7 @@ section {
   margin: auto;
   width: 60%;
 }
-#date {
+.date {
   font-size: 14px;
   font-family: "Raleway", sans-serif;
 }

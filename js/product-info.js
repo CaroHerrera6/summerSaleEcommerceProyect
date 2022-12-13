@@ -1,4 +1,5 @@
 let review = [];
+let rate = document.getElementById("floatingTextarea2");
 
 // Function that shows the main selected product
 function showMyProduct(productInfo) {
@@ -50,7 +51,7 @@ function showMyComment(comment) {
           comment[i].user
         } <span class="star" id="stars">${showMyScore(
       comment[i].score
-    )}</>   <span class = "text-muted" id="date">-- ${
+    )}</>   <span class = "text-muted date">-- ${
       comment[i].dateTime
     } --</span></p>
          <span class="italic">${comment[i].description}</span>
@@ -77,7 +78,6 @@ function showMyScore(score) {
 
 //Function that allows to make a new comment
 function giveAReview(review) {
-  let rate = document.getElementById("floatingTextarea2");
   review.push(rate.value);
   rate.value = "";
   showMyComment(review);
@@ -87,18 +87,45 @@ function giveAReview(review) {
 function showMyReview(review) {
   let reviewToAppend = "";
   let customer = document.getElementById("floatingTextarea3").value;
-  //la fecha
-
+  let today = showDate();
   let score = document.getElementById("score").value;
   reviewToAppend += `<ul class="list-group mb-1">
       <li class="list-group-item">
         <p style="font-weight: 600">${customer} <span class="star" id="stars">${showMyScore(
     score
-  )}</>   <span class = "text-muted" id="">--  --</span></p>
-         <span class="italic">${review}</span>
+  )}</>   <span class = "text-muted date">--${today}  --</span></p>
+         <span class="italic">${rate.value}</span>
       </li>
     </ul>`;
   document.getElementById("new-comment").innerHTML = reviewToAppend;
+}
+
+//Function that shows the time and date of the comment
+function showDate() {
+  let currentDate = new Date();
+  let day = currentDate.getDate();
+  let month = currentDate.getMonth();
+  let year = currentDate.getFullYear();
+  let hour = currentDate.getHours();
+  let minutes = currentDate.getMinutes();
+  let seconds = currentDate.getSeconds();
+
+  if (day < 10) {
+    day = "0" + day;
+  }
+  if (month < 10) {
+    month = "0" + month;
+  }
+  if (hour < 10) {
+    hour = "0" + hour;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+
+  return (
+    year + "-" + month + "-" + day + " " + hour + ":" + minutes + ":" + seconds
+  );
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -108,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (resultObj.status === "ok") {
       productInfo = resultObj.data;
       showMyProduct(productInfo);
+      giveAReview(review);
     }
   });
   getJSONData(
@@ -120,6 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("send").addEventListener("click", () => {
-    giveAReview(review);
+    showMyReview(review);
+    document.getElementById("send").disabled = true;
+    // if (review != "") {
+    //   swal("Oops", "You can only review this product once", "Error");
+    // }
   });
 });
