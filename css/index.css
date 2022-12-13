@@ -2,7 +2,7 @@
   position: sticky;
   height: 75vh;
 
-  background: url("/img/cover.jpg");
+  background: url("../img/cover.jpg");
 
   background-position: center;
   background-size: cover;

@@ -128,14 +128,33 @@ function showDate() {
   );
 }
 
+//Function that shows the related products in a carrousel
+function showRelated(similar) {
+  let relatedToAppend = "";
+
+  for (let i = 0; i < similar.length; i++) {
+    relatedToAppend += `
+    <div onclick="setInfoID(${similar[i].id})" class="cards md-mx-auto">
+     <div class="card">
+      <img src="${similar[i].image}" class="rounded">
+    </div>
+    <p class="mx-auto related-text">${similar[i].title}</p>
+  
+    </div>`;
+  }
+  document.getElementById("related").innerHTML = relatedToAppend;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   getJSONData(
     PRODUCT_INFO_URL + localStorage.getItem("ProdID") + EXT_TYPE
   ).then(function (resultObj) {
     if (resultObj.status === "ok") {
       productInfo = resultObj.data;
+      similar = resultObj.data.related;
       showMyProduct(productInfo);
       giveAReview(review);
+      showRelated(similar);
     }
   });
   getJSONData(

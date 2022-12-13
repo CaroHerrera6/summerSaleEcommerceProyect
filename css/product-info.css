@@ -40,14 +40,14 @@ p {
   line-height: 25px;
 }
 section {
-  padding: 100px 0;
+  padding: 70px 0;
 }
 .discount {
   color: red;
 }
 .comments {
   margin: auto;
-  width: 60%;
+  width: 40%;
 }
 .date {
   font-size: 14px;
@@ -62,4 +62,20 @@ section {
 #floatingTextarea3 {
   max-width: 14em;
   margin-bottom: 1em;
+}
+.related-background {
+  margin: 100px;
+  padding: 100px 200px;
+
+  border-radius: 20px;
+}
+#related .cards {
+  border: #dfdfdf solid 1px;
+  margin: 20px;
+  /* padding-bottom: 50px; */
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.related-text {
+  margin: 10px;
 }
