@@ -31,3 +31,8 @@ let getJSONData = function (url) {
       return result;
     });
 };
+
+let getUserName = localStorage.getItem("name");
+getUserName = null
+  ? (document.getElementById("logInReq").innerHTML = `LOGIN`)
+  : (document.getElementById("logInReq").innerHTML = `Hi` + ` ` + getUserName);

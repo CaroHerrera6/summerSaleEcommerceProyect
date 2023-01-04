@@ -1,0 +1,20 @@
+body {
+  background-image: url("/img/login-background.jpg");
+  background-size: cover;
+}
+.container {
+  color: azure;
+  width: 400px;
+  margin: 20vh auto;
+  font-family: "Bebas Neue", cursive;
+  font-size: 34px;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 920px) {
+  body {
+    background-repeat: no-repeat;
+
+    background-size: 140vh;
+    background-image: url("/img/login-background.jpg");
+  }
+}

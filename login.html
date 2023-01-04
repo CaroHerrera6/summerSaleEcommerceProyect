@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Josefin+Sans:wght@300&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form class="needs-validation" id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="exampleInputName1" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputName1"
+              aria-describedby="nameHelp"
+              required
+            />
+            <div class="valid-feedback">Ok</div>
+            <div class="invalid-feedback">Campo obligatorio</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              required
+            />
+            <div class="valid-feedback">Ok</div>
+            <div class="invalid-feedback">Campo obligatorio</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              required
+            />
+            <div class="valid-feedback">Ok</div>
+            <div class="invalid-feedback">Campo obligatorio</div>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Check me out</label
+            >
+          </div>
+          <button type="button" class="btn btn-secondary" id="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </main>
+    <script src="./js/init.js"></script>
+    <script src="./js/login.js"></script>
+  </body>
+</html>
